@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UFRGS · CV 2018 · Língua Portuguesa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --paper: #F7F4EC;
+    --paper-2: #EFEADC;
+    --ink: #1B1B17;
+    --ink-soft: #4A4740;
+    --rule: #C9C2AC;
+    --red: #B3261E;
+    --red-soft: #d9d2c2;
+    --blue: #2A3E66;
+    --green: #2F6B4F;
+    --max: 760px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 18% 8%, rgba(42,62,102,0.05), transparent 40%),
+      radial-gradient(circle at 90% 70%, rgba(179,38,30,0.04), transparent 45%);
+    color:var(--ink);
+    font-family:'Lora', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  ::selection{ background:var(--red); color:var(--paper); }
+
+  a{ color:inherit; }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  header.masthead{
+    border-bottom: 3px solid var(--ink);
+    padding: 38px 0 22px;
+    position:relative;
+  }
+  header.masthead::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:6px;
+    background: repeating-linear-gradient(180deg, var(--red) 0 10px, transparent 10px 20px);
+    opacity:.55;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--red);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  h1.title{
+    font-family:'Source Serif 4', serif;
+    font-weight:800;
+    font-size: clamp(34px, 6vw, 50px);
+    line-height:1.02;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  h1.title em{
+    font-style:italic;
+    font-weight:600;
+    color:var(--blue);
+  }
+  .subtitle{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .subtitle span{ position:relative; padding-left:14px; }
+  .subtitle span::before{
+    content:"—";
+    position:absolute; left:0; color:var(--rule);
+  }
+
+  /* ---------- INTRO / SCORE PANEL ---------- */
+
+  .intro{
+    padding: 28px 0 8px;
+    font-size:16px;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+
+  .scoreboard{
+    margin: 22px 0 30px;
+    border:1px solid var(--ink);
+    background: var(--paper-2);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 16px 20px;
+    gap: 16px;
+    flex-wrap:wrap;
+  }
+  .scoreboard .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .scoreboard .num{
+    font-family:'Source Serif 4', serif;
+    font-weight:800;
+    font-size:30px;
+    color:var(--blue);
+  }
+  .scoreboard .num small{
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    font-weight:500;
+    color:var(--ink-soft);
+  }
+  .progress-track{
+    flex:1 1 160px;
+    height:8px;
+    background:#E2DCC9;
+    border:1px solid var(--ink);
+    position:relative;
+    overflow:hidden;
+  }
+  .progress-fill{
+    position:absolute; left:0; top:0; bottom:0;
+    width:0%;
+    background: repeating-linear-gradient(135deg, var(--blue) 0 6px, #34487a 6px 12px);
+    transition: width .4s ease;
+  }
+  .btn-reset{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    background:transparent;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    padding:9px 14px;
+    cursor:pointer;
+    transition: background .15s, color .15s;
+  }
+  .btn-reset:hover{ background:var(--ink); color:var(--paper); }
+
+  /* ---------- TEXT BLOCKS ---------- */
+
+  .passage{
+    margin: 36px 0 8px;
+    border-left: 3px solid var(--blue);
+    padding: 4px 0 4px 22px;
+  }
+  .passage-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--blue);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .passage-title{
+    font-family:'Source Serif 4', serif;
+    font-weight:700;
+    font-style:italic;
+    font-size:19px;
+    margin:0 0 12px;
+  }
+  .passage-body{
+    font-size:15.5px;
+    line-height:1.85;
+    color:var(--ink);
+  }
+  .passage-body p{ margin:0 0 14px; }
+  .passage-source{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin-top:10px;
+  }
+
+  /* ---------- QUESTION CARD ---------- */
+
+  .qcard{
+    margin: 26px 0;
+    position:relative;
+    border:1px solid var(--rule);
+    background: var(--paper);
+    padding: 0;
+  }
+  .qhead{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding: 18px 22px 12px;
+    border-bottom:1px dashed var(--rule);
+  }
+  .qnum{
+    font-family:'Source Serif 4', serif;
+    font-weight:800;
+    font-size:30px;
+    color:var(--blue);
+    line-height:1;
+    min-width:48px;
+  }
+  .qtext{
+    font-size:15.5px;
+    line-height:1.65;
+    padding-top:2px;
+  }
+  .qtext .quote{
+    display:block;
+    margin:10px 0;
+    padding:10px 14px;
+    background:var(--paper-2);
+    border-left:2px solid var(--rule);
+    font-style:italic;
+    font-size:14.5px;
+  }
+
+  .options{
+    list-style:none;
+    margin:0;
+    padding: 10px 22px 20px;
+  }
+  .option{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding: 11px 8px;
+    border-bottom:1px solid #ECE7D8;
+    cursor:pointer;
+    font-size:15px;
+    line-height:1.55;
+    transition: background .12s;
+  }
+  .option:last-child{ border-bottom:none; }
+  .option:hover{ background: var(--paper-2); }
+
+  .bubble{
+    flex:0 0 auto;
+    width:26px; height:26px;
+    border-radius:50%;
+    border:1.6px solid var(--ink);
+    font-family:'JetBrains Mono', monospace;
+    font-weight:600;
+    font-size:12.5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:1px;
+    background:var(--paper);
+    transition: all .15s;
+  }
+
+  .option.selected .bubble{
+    background:var(--blue);
+    border-color:var(--blue);
+    color:var(--paper);
+  }
+
+  .qcard.answered .option{ cursor:default; }
+  .qcard.answered .option:hover{ background:none; }
+
+  .qcard.answered .option.correct .bubble{
+    background:var(--green);
+    border-color:var(--green);
+    color:var(--paper);
+  }
+  .qcard.answered .option.correct{ color:var(--green); font-weight:600; }
+
+  .qcard.answered .option.wrong-pick .bubble{
+    background:var(--red);
+    border-color:var(--red);
+    color:var(--paper);
+  }
+  .qcard.answered .option.wrong-pick{ text-decoration: line-through; color:var(--red); }
+
+  .qcard.answered .option.dim{ opacity:.45; }
+
+  .feedback{
+    margin: 0 22px 20px;
+    padding: 10px 14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    display:none;
+    align-items:center;
+    gap:8px;
+  }
+  .qcard.answered .feedback{ display:flex; }
+  .feedback.ok{ background:#e7f1ea; color:var(--green); border:1px solid var(--green); }
+  .feedback.bad{ background:#f6e7e5; color:var(--red); border:1px solid var(--red); }
+  .stamp{
+    font-weight:700;
+    border:1.5px solid currentColor;
+    padding:2px 8px;
+    transform:rotate(-3deg);
+    text-transform:uppercase;
+  }
+
+  /* ---------- FINAL SCORE / GABARITO ---------- */
+
+  .finalcard{
+    margin:50px 0 30px;
+    border:2px solid var(--ink);
+    background: var(--paper-2);
+    padding: 30px 26px;
+    text-align:center;
+    display:none;
+  }
+  .finalcard.show{ display:block; }
+  .finalcard .stampbig{
+    font-family:'Source Serif 4', serif;
+    font-weight:800;
+    font-size: clamp(28px, 7vw, 44px);
+    color:var(--blue);
+    margin:0 0 6px;
+  }
+  .finalcard p{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:4px 0 0;
+  }
+
+  .answer-sheet{
+    margin: 14px 0 60px;
+  }
+  .answer-sheet-title{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+    border-top:1px solid var(--ink);
+    padding-top:14px;
+  }
+  .grid-sheet{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:10px;
+  }
+  .cell{
+    border:1px solid var(--rule);
+    padding:8px 6px;
+    text-align:center;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .cell .cn{ font-size:10.5px; color:var(--ink-soft); display:block; margin-bottom:5px;}
+  .cell .cb{
+    width:22px;height:22px;border-radius:50%;
+    border:1.4px solid var(--rule);
+    margin:0 auto;
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:600;
+  }
+  .cell.filled-ok .cb{ background:var(--green); border-color:var(--green); color:var(--paper); }
+  .cell.filled-bad .cb{ background:var(--red); border-color:var(--red); color:var(--paper); }
+
+  footer{
+    border-top:3px solid var(--ink);
+    padding: 22px 0 60px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+
+  @media (max-width:520px){
+    .grid-sheet{ grid-template-columns: repeat(5,1fr); gap:6px;}
+    .qnum{ font-size:24px; min-width:38px;}
+    .scoreboard{ flex-direction:column; align-items:flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">COPERSE · Comissão Permanente de Seleção</div>
+    <h1 class="title">UFRGS <em>CV 2018</em><br>Língua Portuguesa</h1>
+    <div class="subtitle">
+      <span>25 questões</span>
+      <span>1 alternativa correta cada</span>
+      <span>gabarito oficial embutido</span>
+    </div>
+  </header>
+
+  <div class="intro">
+    Vestibular de inverno da UFRGS (Concurso Vestibular 2018), prova de Língua Portuguesa.
+    Toque numa alternativa para responder — o gabarito é revelado na hora, questão por questão.
+  </div>
+
+  <div class="scoreboard">
+    <div>
+      <div class="label">Acertos</div>
+      <div class="num" id="scoreNum">0<small>/25</small></div>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <button class="btn-reset" id="resetBtn">Reiniciar prova</button>
+  </div>
+
+  <!-- TEXTO 1 -->
+  <div class="passage">
+    <div class="passage-label">Texto I · Questões 01 a 08</div>
+    <div class="passage-title">Sobre obra e condicionamento social</div>
+    <div class="passage-body">
+      <p>(l.01) Nada mais importante para chamar a atenção sobre uma verdade do que exagerá-la. Mas também, nada mais perigoso, ........ um dia vem a reação indispensável e a relega injustamente para a categoria do erro, até que se efetue a operação difícil de chegar a um ponto de vista objetivo, sem desfigurá-la de um lado nem de outro. É o que tem ocorrido com o estudo da relação entre a obra e o seu condicionamento social, que a certa altura chegou a ser vista como chave para compreendê-la, depois foi rebaixada como falha de visão, — e talvez só agora comece a ser proposta nos devidos termos.</p>
+      <p>(l.15) De fato, antes se procurava mostrar que o valor e o significado de uma obra dependiam de ela exprimir ou não certo aspecto da realidade, e que este aspecto constituía o que ela tinha de essencial. Depois, chegou-se à posição oposta, procurando-se mostrar que a matéria de uma obra é secundária, e que a sua importância deriva das operações formais postas em jogo, conferindo-lhe uma peculiaridade que a torna de fato independente de quaisquer condicionamentos, sobretudo social, considerado inoperante como elemento de compreensão. Hoje sabemos que a integridade da obra não permite adotar nenhuma dessas visões ........; e que só a podemos entender fundindo texto e contexto numa interpretação dialeticamente íntegra, em que tanto o velho ponto de vista que explicava pelos fatores externos, quanto o outro, norteado pela convicção de que a estrutura é virtualmente independente, se combinam como momentos necessários do processo interpretativo. Sabemos, ainda, que o externo (no caso, o social) importa, não como causa, nem como significado, mas como elemento que desempenha certo papel na constituição da estrutura, tornando-se, portanto, interno.</p>
+      <p>(l.44) Neste caso, saímos dos aspectos periféricos da sociologia, ou da história sociologicamente orientada, para chegar a uma interpretação estética que assimilou a dimensão social como fator de arte. Quando isto se dá, ocorre o paradoxo assinalado inicialmente: o externo se torna interno e a crítica deixa de ser sociológica, para ser apenas crítica. Segundo esta ordem de ideias, o ângulo sociológico adquire uma validade maior do que tinha. Em ........, não pode mais ser imposto como critério único, ou mesmo preferencial, pois a importância de cada fator depende do caso a ser analisado. Uma crítica que se queira integral deve deixar de ser unilateralmente sociológica, psicológica ou linguística, para utilizar livremente os elementos capazes de conduzirem a uma interpretação coerente.</p>
+    </div>
+    <div class="passage-source">Adaptado de: CANDIDO, Antônio. <em>Literatura e sociedade</em>. 9. ed. Rio de Janeiro: Ouro sobre Azul, 2006.</div>
+  </div>
+
+  <div id="quiz"></div>
+
+  <!-- TEXTO 2 -->
+  <div class="passage" id="passage2-anchor">
+    <div class="passage-label">Texto II · Questões 09 a 16</div>
+    <div class="passage-title">O Centauro no Jardim</div>
+    <div class="passage-body">
+      <p>(l.01) — Temos sorte de viver no Brasil — dizia meu pai, depois da guerra. — Na Europa mataram milhões de judeus.</p>
+      <p>Contava as experiências que os médicos nazistas faziam com os prisioneiros. Decepavam-lhes as cabeças, faziam-nas encolher — à maneira, li depois, dos índios Jivaros. Amputavam pernas e braços. Realizavam estranhos transplantes: uniam a metade superior de um homem ........ metade inferior de uma mulher, ou aos quartos traseiros de um bode. Felizmente morriam essas atrozes quimeras; expiravam como seres humanos, não eram obrigadas a viver como aberrações. (........ essa altura eu tinha os olhos cheios de lágrimas. Meu pai pensava que a descrição das maldades nazistas me deixava comovido.)</p>
+      <p>(l.19) Em 1948 foi proclamado o Estado de Israel. Meu pai abriu uma garrafa de vinho — o melhor vinho do armazém —, brindamos ao acontecimento. E não saíamos de perto do rádio, acompanhando ........ notícias da guerra no Oriente Médio. Meu pai estava entusiasmado com o novo Estado: em Israel, explicava, vivem judeus de todo o mundo, judeus brancos da Europa, judeus pretos da África, judeus da Índia, isto sem falar nos beduínos com seus camelos: tipos muito esquisitos, Guedali.</p>
+      <p>(l.32) Tipos esquisitos — aquilo me dava ideias. Por que não ir para Israel? Num país de gente tão estranha — e, ainda por cima, em guerra — eu certamente não chamaria a atenção. Ainda menos como combatente, entre a poeira e a fumaça dos incêndios. Eu me via correndo pelas ruelas de uma aldeia, empunhando um revólver trinta e oito, atirando sem cessar; eu me via caindo, varado de balas. Aquela, sim, era a morte que eu almejava, morte heroica, esplêndida justificativa para uma vida miserável, de monstro encurralado. E, caso não morresse, poderia viver depois num kibutz. Eu, que conhecia tão bem a vida numa fazenda, teria muito a fazer ali. Trabalhador dedicado, os membros do kibutz terminariam por me aceitar; numa nova sociedade há lugar para todos, mesmo os de patas de cavalo.</p>
+    </div>
+    <div class="passage-source">Adaptado de: SCLIAR, M. <em>O centauro no jardim</em>. 9. ed. Porto Alegre: L&PM, 2001.</div>
+  </div>
+
+  <div id="quiz2"></div>
+
+  <!-- TEXTO 3 -->
+  <div class="passage" id="passage3-anchor">
+    <div class="passage-label">Texto III · Questões 17 a 25</div>
+    <div class="passage-title">Semântica lexical</div>
+    <div class="passage-body">
+      <p>(l.01) ........ me perguntam: quantas palavras uma pessoa sabe? Essa é uma pergunta importante, principalmente para quem ensina línguas estrangeiras. Seria muito útil para quem planeja um curso de francês ou japonês ter uma estimativa de quantas palavras um nativo conhece; e quantas os alunos precisam aprender para usar a língua com certa facilidade. Essas informações seriam preciosas para quem está preparando um manual que inclua, entre outras coisas, um planejamento cuidadoso da introdução gradual de vocabulário.</p>
+      <p>(l.13) À parte isso, a pergunta tem seu interesse próprio. Uma língua não é apenas composta de palavras: ela inclui também regras gramaticais e um mundo de outros elementos que também precisam ser dominados. Mas as palavras são particularmente numerosas, e é notável como qualquer pessoa, instruída ou não, ........ acesso a esse acervo imenso de informação com facilidade e rapidez. Assim, perguntar quantas palavras uma pessoa sabe é parte do problema geral de o que é que uma pessoa tem em sua mente e que ........ permite usar a língua, falando e entendendo.</p>
+      <p>(l.26) Antes de mais nada, porém, o que é uma palavra? Ora, alguém vai dizer, "todo mundo sabe o que é uma palavra". Mas não é bem assim. Considere a palavra <em>olho</em>. É muito claro que isso aí é uma palavra — mas será que <em>olhos</em> é a mesma palavra (só que no plural)? Ou será outra palavra?</p>
+      <p>(l.33) Bom, há razões para responder das duas maneiras: é a mesma palavra, porque significa a mesma coisa (mas com a ideia de plural); e é outra palavra, porque se pronuncia diferentemente (<em>olhos</em> tem um "s" final que <em>olho</em> não tem, além da diferença de timbre das vogais tônicas). Entretanto, a razão principal por que julgamos que <em>olho</em> e <em>olhos</em> sejam a mesma palavra é que a relação entre elas é extremamente regular; ou seja, vale não apenas para esse par, mas para milhares de outros pares de elementos da língua: olho/olhos, orelha/orelhas, gato/gatos, etc. E, semanticamente, a relação é a mesma em todos os pares: a forma sem "s" denota um objeto só, a forma com "s" denota mais de um objeto. Daí se tira uma consequência importante: não é preciso aprender e guardar permanentemente na memória cada caso individual; aprendemos uma regra geral ("faz-se o plural acrescentando um "s" ao singular"), e estamos prontos.</p>
+    </div>
+    <div class="passage-source">Adaptado de: PERINI, Mário A. <em>Semântica lexical</em>. ReVEL, v. 11, n. 20, 2013.</div>
+  </div>
+
+  <div id="quiz3"></div>
+
+  <div class="finalcard" id="finalCard">
+    <div class="stampbig" id="finalStamp">—</div>
+    <p id="finalDetail">—</p>
+  </div>
+
+  <div class="answer-sheet">
+    <div class="answer-sheet-title">Folha de respostas</div>
+    <div class="grid-sheet" id="sheet"></div>
+  </div>
+
+  <footer>
+    UFRGS — Concurso Vestibular 2018 · Língua Portuguesa &amp; Redação<br>
+    Conteúdo de prova reproduzido para fins de estudo.
+  </footer>
+
+</div>
+
+<script>
+const DATA = [
+{n:1,  text:"Assinale a alternativa que preenche corretamente as lacunas das linhas 03, 30 e 54, nessa ordem.",
+ opts:["porque – dissociadas – compensassão","por que – dissossiadas – compenssação","por que – dissociadas – compensassão","porque – dissociadas – compensação","porque – dissossiadas – compensação"], ans:3},
+{n:2,  text:"Assinale a afirmação que está de acordo com a argumentação defendida pelo autor no texto.",
+ opts:[
+  "O autor defende um ponto de vista objetivo de análise que trate da relação entre a obra e o condicionamento social, por meio de interpretação exacerbada da realidade, concebida como verdade, para chamar a atenção do leitor.",
+  "O autor defende que o valor e o significado de uma obra são dependentes de sua relação com a realidade e que este aspecto constitui o essencial da análise literária, por agregar uma história sociologicamente orientada, com a valorização dos aspectos externos à obra.",
+  "O autor defende uma análise unicamente sociológica da obra para que se configure uma interpretação assimilada à realidade, que conceda uma validade maior ao ângulo sociológico e se chegue à verdade no processo interpretativo.",
+  "O autor defende uma interpretação coerente e estética, que considere o aspecto externo (social) como interno e como fator de arte agregado a outros elementos, com a consideração da importância de dado fator como dependente de cada obra em análise.",
+  "O autor defende que, para se chegar a uma interpretação coerente que valorize o texto e o contexto externo, deve-se atribuir o mesmo grau de importância aos fatores externos (sociais) e internos (psicológicos ou linguísticos)."
+ ], ans:3},
+{n:3,  text:"Considere as seguintes afirmações sobre a síntese de cada parágrafo do texto. Quais estão de acordo com o texto?",
+ quote:"I - O primeiro parágrafo situa a problemática relacionada à relação da obra com o seu condicionamento social, com a apresentação de duas posições.<br>II - O segundo parágrafo apresenta os modos de abordagem da relação entre a obra e a realidade, constituídos no tempo.<br>III- O terceiro parágrafo procura separar as diferentes posições acerca da análise literária para inserir a relação entre obra e realidade como um fator de arte.",
+ opts:["Apenas I.","Apenas III.","Apenas I e II.","Apenas II e III.","I, II e III."], ans:2},
+{n:4,  text:"Considere as substituições de nexos do texto e assinale com 1 aquelas que mantêm o sentido e com 2 aquelas que alteram. Qual a sequência correta (de cima para baixo)?",
+ quote:"( ) Mas (l. 03) por sobretudo.<br>( ) De fato (l. 15) por No entanto.<br>( ) portanto (l. 43) por todavia.<br>( ) pois (l. 56) por porque.",
+ opts:["1 – 2 – 1 – 1.","1 – 1 – 2 – 2.","2 – 1 – 2 – 1.","2 – 2 – 1 – 1.","2 – 2 – 2 – 1."], ans:4},
+{n:5,  text:"Considere as afirmações sobre o uso de pronomes no texto. Quais estão corretas?",
+ quote:"I - O pronome <em>a</em> (l. 04) faz referência a <em>a reação indispensável</em> (l. 04).<br>II - A forma pronominal <em>la</em> (l. 07) faz referência a <em>uma verdade</em> (l. 02).<br>III- O pronome <em>se</em> (l. 42) faz referência a <em>o externo</em> (l. 39).",
+ opts:["Apenas I.","Apenas II.","Apenas I e III.","Apenas II e III.","I, II e III."], ans:3},
+{n:6,  text:"Assinale a alternativa que apresenta apenas palavras que contêm dígrafos consonantais.",
+ opts:["reação (l. 04) – quaisquer (l. 25) – paradoxo (l. 49).","chegar (l. 06) – rebaixada (l. 12) – deixar (l. 58).","chegar (l. 06) – convicção (l. 35) – linguística (l. 60).","chave (l. 11) – nenhuma (l. 30) – necessários (l. 37).","exprimir (l. 17) – explicava (l. 34) – externos (l. 34)."], ans:3},
+{n:7,  text:"Se a palavra relação fosse substituída por vínculo no trecho citado, quantas outras palavras teriam de ser modificadas para fins de correção gramatical?",
+ quote:"\"É o que tem ocorrido com o estudo da relação entre a obra e o seu condicionamento social, que a certa altura chegou a ser vista como chave para compreendê-la, depois foi rebaixada como falha de visão, — e talvez só agora comece a ser proposta nos devidos termos\" (l. 08 a 14).",
+ opts:["Duas.","Três.","Quatro.","Cinco.","Seis."], ans:2},
+{n:8,  text:"Considere as afirmações sobre o significado de palavras nos contextos de ocorrência. Quais estão corretas?",
+ quote:"I - <em>chave</em> (l. 11) poderia ser substituída por <em>elemento essencial</em>, sem prejuízo do sentido.<br>II - <em>Hoje</em> (l. 28) diz respeito somente ao dia em que o autor escreveu o texto, situando-o nesse momento específico.<br>III- <em>dialeticamente</em> (l. 32) diz respeito a um modo de interpretação que considera a interação de fatores distintos em um processo de síntese.",
+ opts:["Apenas I.","Apenas II.","Apenas III.","Apenas I e III.","I, II e III."], ans:3},
+];
+
+const DATA2 = [
+{n:9,  text:"Assinale a alternativa que preenche corretamente as lacunas das linhas 10, 15 e 23, nessa ordem.",
+ opts:["à – À – às","a – A – às","à – A – às","a – À – as","à – A – as"], ans:4},
+{n:10, text:"Considere as afirmações sobre o conteúdo do texto. Quais afirmações estão corretas?",
+ quote:"I - O narrador considera se mudar para Israel, pois tinha como principal motivação trabalhar em um kibutz.<br>II - O narrador comemora a proclamação do Estado de Israel com seu pai, pois ambos tinham planos de se mudar do Brasil.<br>III- O pai do narrador sentia-se afortunado de morar no Brasil no período pós-guerra, pois seu povo havia sido perseguido na Europa.",
+ opts:["Apenas I.","Apenas II.","Apenas III.","Apenas I e II.","I, II e III."], ans:2},
+{n:11, text:"Assinale a alternativa que apresenta a transposição correta para o discurso indireto do trecho: \"— Temos sorte de viver no Brasil — dizia meu pai, depois da guerra\" (l. 01-02).",
+ opts:["Dizia meu pai que tinha sorte de viver no Brasil depois da guerra.","Dizia meu pai que tínhamos sorte de viver no Brasil depois da guerra.","Dizia meu pai para mim que tivéramos sorte de viver no Brasil depois da guerra.","Dizia meu pai: temos sorte de viver no Brasil depois da guerra.","Disse meu pai que tivemos sorte de viver no Brasil depois da guerra."], ans:1},
+{n:12, text:"Considere as propostas de reescrita do trecho. Quais estão corretas e preservam a significação do trecho original?",
+ quote:"Original: \"Em 1948 foi proclamado o Estado de Israel. Meu pai abriu uma garrafa de vinho – o melhor vinho do armazém –, brindamos ao acontecimento. E não saíamos de perto do rádio, acompanhando as notícias da guerra no Oriente Médio\" (l. 19-24).<br>I - Meu pai abriu uma garrafa de vinho e brindamos ao acontecimento – o melhor vinho do armazém. Em 1948 foi proclamado o Estado de Israel e não saíamos de perto do rádio...<br>II - Em 1948, o melhor vinho do armazém foi aberto por meu pai (uma garrafa), foi proclamado o Estado de Israel, brindamos ao acontecimento e, acompanhando as notícias...<br>III- Em 1948, quando foi proclamado o Estado de Israel, meu pai abriu uma garrafa de vinho – o melhor vinho do armazém –, brindamos ao acontecimento. E não saíamos de perto do rádio...",
+ opts:["Apenas I.","Apenas II.","Apenas III.","Apenas I e III.","I, II e III."], ans:2},
+{n:13, text:"Assinale V ou F sobre os sujeitos de algumas formas verbais do texto. Sequência correta (de cima para baixo):",
+ quote:"( ) O sujeito de <em>mataram</em> (l. 02) é <em>milhões de judeus</em> (l. 03).<br>( ) O sujeito de <em>Amputavam</em> (l. 08) é <em>os médicos nazistas</em> (l. 04-05).<br>( ) O sujeito de <em>morriam</em> (l. 12) é <em>essas atrozes quimeras</em> (l. 13).<br>( ) O sujeito da locução <em>foi proclamado</em> (l. 19) é <em>o Estado de Israel</em> (l. 19).",
+ opts:["F – V – V – V.","V – F – V – F.","V – F – F – V.","V – V – V – V.","F – V – F – F."], ans:0},
+{n:14, text:"Assinale a proposta de mudança no emprego de vírgula que mantém a correção e o sentido do enunciado original.",
+ opts:["Colocação de vírgula imediatamente após experiências (l. 04).","Colocação de vírgula imediatamente após Felizmente (l. 12).","Colocação de vírgula imediatamente após que (l. 17).","Colocação de vírgula imediatamente após país (l. 32).","Colocação de vírgula imediatamente após morte (l. 40)."], ans:1},
+{n:15, text:"Assinale a alternativa em que a substituição proposta mantém o sentido da passagem, considerando o contexto.",
+ opts:["essas atrozes quimeras (l. 13) por esses assombrosos monstros.","expiravam como seres humanos (l. 13-14) por respiravam como pessoas.","ainda por cima (l. 33) por ainda assim.","varado de balas (l. 40) por morto com tiros.","encurralado (l. 43) por curvado."], ans:0},
+{n:16, text:"Se a forma verbal almejava fosse substituída por aspirava em \"Aquela, sim, era a morte que eu almejava\" (l. 40-41), qual alternativa estaria gramaticalmente correta?",
+ opts:["Aquela, sim, era a morte a que eu aspirava.","Aquela, sim, era a morte para a qual eu aspirava.","Aquela, sim, era a morte que eu aspirava.","Aquela, sim, era a morte de que eu aspirava.","Aquela, sim, era a morte com a qual eu aspirava."], ans:1},
+];
+
+const DATA3 = [
+{n:17, text:"Assinale a alternativa que preenche corretamente as lacunas das linhas 01, 20 e 24, nessa ordem.",
+ opts:["Às vezes – têm – lhe","Às vezes – tem – lhe","As vezes – têm – o","Às vezes – tem – o","As vezes – têm – lhe"], ans:1},
+{n:18, text:"Assinale a afirmação que está de acordo com o sentido global do texto.",
+ opts:[
+  "O autor trata da importância de aprender e armazenar permanentemente na memória cada palavra individual para o falante usar uma língua e aprender outras, como francês ou japonês.",
+  "O autor defende que o falante não aprende casos individuais, mas regras gerais que lhe permitem usar uma língua, materna ou estrangeira.",
+  "O autor enfatiza a importância do vocabulário nos diferentes métodos de ensino e aprendizagem de língua materna e estrangeira.",
+  "O autor argumenta que considerar a distinção entre singular e plural das palavras pode levar à criação de um método eficaz de aprendizado de línguas estrangeiras.",
+  "O autor aborda as causas do armazenamento de palavras pelo falante e as consequências desse armazenamento no uso da língua materna e na aprendizagem de línguas estrangeiras."
+ ], ans:1},
+{n:19, text:"Assinale a alternativa em que o deslocamento de segmentos — com os ajustes de maiúscula, minúscula e pontuação — mantém as relações de sentido do parágrafo.",
+ opts:["principalmente (l. 03) para imediatamente depois de é (l. 02).","entre outras coisas (l. 11) para imediatamente antes de Essas informações (l. 09).","Antes de mais nada (l. 26) para imediatamente depois de uma (l. 26).","Ora (l. 27) para imediatamente depois de alguém (l. 27).","Entretanto (l. 39) para imediatamente depois de principal (l. 39)."], ans:4},
+{n:20, text:"Considere as substituições de palavras do texto. Quais indicam que a segunda palavra é sinônimo adequado da primeira, no contexto?",
+ quote:"1 - estimativa (l. 06) por pretensão.<br>2 - gradual (l. 12) por progressiva.<br>3 - acervo (l. 20) por conjunto.",
+ opts:["Apenas 1.","Apenas 2.","Apenas 3.","Apenas 1 e 2.","Apenas 2 e 3."], ans:4},
+{n:21, text:"Considere as afirmações sobre o texto. Quais estão corretas?",
+ quote:"I - Os usos pronominais e verbais ora na 1ª pessoa do singular, ora na 1ª do plural, ora na 3ª pessoa devem-se ao caráter científico do texto.<br>II - Expressões como <em>Bom</em> (l. 33) e <em>daí</em> (l. 48) revelam um uso coloquial relacionado ao fato de o texto ter sido publicado em revista, e não em livro.<br>III- A predominância de verbos no presente do indicativo é reveladora de seu caráter expositivo-argumentativo.",
+ opts:["Apenas I.","Apenas II.","Apenas III.","Apenas I e II.","I, II e III."], ans:2},
+{n:22, text:"O autor fala da diferença de timbre das vogais tônicas (l. 38) entre olho (singular) e olhos (plural). Assinale a alternativa que apresenta uma palavra cuja flexão de número acarrete essa mesma diferença de timbre vocálico.",
+ opts:["Caroço – caroços","Cachorro – cachorros","Acordo – acordos","Estojo – estojos","Rosto – rostos"], ans:0},
+{n:23, text:"Assinale V ou F. Sequência correta (de cima para baixo):",
+ quote:"( ) As interrogações servem para o autor problematizar o tema e exigir uma resposta do leitor.<br>( ) Os usos de futuro do pretérito, no 1º parágrafo, funcionam como recurso para sugerir possibilidades ao leitor.<br>( ) O uso de <em>julgamos</em> (l. 39), no plural, refere-se ao autor e aos demais falantes do português, incluindo os leitores.<br>( ) As aspas (l. 27-28) referem o dizer de uma pessoa indeterminada, trazida para se contrapor por meio de contra-argumento.",
+ opts:["F – F – V – F.","F – V – V – V.","V – V – F – V.","F – V – F – V.","V – F – F – F."], ans:1},
+{n:24, text:"Considere as reescritas do trecho, levando em conta os contextos que o antecedem e seguem. Quais estão corretas e preservam a significação original?",
+ quote:"Original: \"Daí se tira uma consequência importante: não é preciso aprender e guardar permanentemente na memória cada caso individual; aprendemos uma regra geral ('faz-se o plural acrescentando um 's' ao singular'), e estamos prontos\" (l. 48-53).<br>I - Tira-se daí uma consequência importante: aprendemos uma regra geral... Não é preciso aprender e guardar... cada caso individual.<br>II - Daí se tira como consequência importante o fato de não ser preciso aprender... cada caso individual, pois aprendemos uma regra geral..., e estamos prontos.<br>III- Não é preciso aprender... cada caso individual; aprendemos uma regra geral..., e estamos prontos. Essa é a consequência importante que daí se tira.",
+ opts:["Apenas I.","Apenas III.","Apenas I e II.","Apenas II e III.","I, II e III."], ans:2},
+{n:25, text:"A regra gramatical de flexão nominal expressa pelo autor (\"faz-se o plural acrescentando um 's' ao singular\") não se aplica a todas as palavras da língua portuguesa. Qual alternativa comprova essa afirmação?",
+ opts:["Mamão.","Bênção.","Degrau.","Exame.","Cidadão."], ans:0},
+];
+
+const LETTERS = ["A","B","C","D","E"];
+const state = {};
+
+function buildQuestion(container, q){
+  const card = document.createElement("div");
+  card.className = "qcard";
+  card.id = "q" + q.n;
+
+  const head = document.createElement("div");
+  head.className = "qhead";
+  head.innerHTML = `<div class="qnum">${String(q.n).padStart(2,"0")}</div>
+                     <div class="qtext">${q.text}${q.quote ? `<span class="quote">${q.quote}</span>` : ""}</div>`;
+  card.appendChild(head);
+
+  const list = document.createElement("ul");
+  list.className = "options";
+
+  q.opts.forEach((opt, i) => {
+    const li = document.createElement("li");
+    li.className = "option";
+    li.dataset.i = i;
+    li.innerHTML = `<span class="bubble">${LETTERS[i]}</span><span>${opt}</span>`;
+    li.addEventListener("click", () => selectAnswer(q, card, i, list));
+    list.appendChild(li);
+  });
+
+  card.appendChild(list);
+
+  const fb = document.createElement("div");
+  fb.className = "feedback";
+  fb.id = "fb" + q.n;
+  card.appendChild(fb);
+
+  container.appendChild(card);
+}
+
+function selectAnswer(q, card, chosenIndex, list){
+  if(card.classList.contains("answered")) return;
+  card.classList.add("answered");
+  state[q.n] = chosenIndex;
+
+  const opts = list.querySelectorAll(".option");
+  opts.forEach((li, i) => {
+    if(i === q.ans){ li.classList.add("correct"); }
+    else if(i === chosenIndex){ li.classList.add("wrong-pick"); }
+    else { li.classList.add("dim"); }
+  });
+
+  const fb = document.getElementById("fb" + q.n);
+  if(chosenIndex === q.ans){
+    fb.className = "feedback ok";
+    fb.innerHTML = `<span class="stamp">Correto</span> alternativa ${LETTERS[q.ans]}.`;
+  } else {
+    fb.className = "feedback bad";
+    fb.innerHTML = `<span class="stamp">Incorreto</span> a correta é a alternativa ${LETTERS[q.ans]}.`;
+  }
+
+  updateScore();
+  updateSheet();
+}
+
+function updateScore(){
+  const answered = Object.keys(state).length;
+  let correct = 0;
+  ALL.forEach(q => { if(state[q.n] === q.ans) correct++; });
+
+  document.getElementById("scoreNum").innerHTML = `${correct}<small>/25</small>`;
+  document.getElementById("progressFill").style.width = (answered/25*100) + "%";
+
+  const finalCard = document.getElementById("finalCard");
+  if(answered === 25){
+    finalCard.classList.add("show");
+    const pct = Math.round(correct/25*100);
+    let verdict = "Aprovado(a)";
+    if(pct < 50) verdict = "Insuficiente";
+    else if(pct < 70) verdict = "Regular";
+    document.getElementById("finalStamp").textContent = `${correct} / 25 — ${verdict}`;
+    document.getElementById("finalDetail").textContent = `${pct}% de aproveitamento na prova de Língua Portuguesa · UFRGS CV 2018`;
+  } else {
+    finalCard.classList.remove("show");
+  }
+}
+
+function buildSheet(){
+  const sheet = document.getElementById("sheet");
+  sheet.innerHTML = "";
+  ALL.forEach(q => {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.id = "cell" + q.n;
+    cell.innerHTML = `<span class="cn">${String(q.n).padStart(2,"0")}</span><span class="cb">–</span>`;
+    sheet.appendChild(cell);
+  });
+}
+
+function updateSheet(){
+  ALL.forEach(q => {
+    const cell = document.getElementById("cell" + q.n);
+    cell.classList.remove("filled-ok","filled-bad");
+    const cb = cell.querySelector(".cb");
+    if(state[q.n] !== undefined){
+      cb.textContent = LETTERS[state[q.n]];
+      cell.classList.add(state[q.n] === q.ans ? "filled-ok" : "filled-bad");
+    } else {
+      cb.textContent = "–";
+    }
+  });
+}
+
+const ALL = [...DATA, ...DATA2, ...DATA3];
+
+DATA.forEach(q => buildQuestion(document.getElementById("quiz"), q));
+DATA2.forEach(q => buildQuestion(document.getElementById("quiz2"), q));
+DATA3.forEach(q => buildQuestion(document.getElementById("quiz3"), q));
+
+buildSheet();
+updateScore();
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  Object.keys(state).forEach(k => delete state[k]);
+  document.querySelectorAll(".qcard").forEach(card => {
+    card.classList.remove("answered");
+    card.querySelectorAll(".option").forEach(o => o.classList.remove("selected","correct","wrong-pick","dim"));
+  });
+  updateScore();
+  updateSheet();
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+</script>
+
+</body>
+</html>
